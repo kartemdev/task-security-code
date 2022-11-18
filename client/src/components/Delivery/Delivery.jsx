@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import styles from './Delivery.module.css';
 
@@ -19,4 +19,4 @@ function Delivery() {
   );
 }
 
-export default Delivery;
+export default memo(Delivery);

@@ -3,6 +3,13 @@
   justify-content: center;
 }
 
+.containerInput {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+
 .tree {
   width: 20vw;
   height: 80vh;

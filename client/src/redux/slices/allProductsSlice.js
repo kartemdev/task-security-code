@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const allProductsSlice = createSlice({
   name: 'products',
   initialState: {
-    data: []
+    data: [],
   },
   reducers: {
     setProducts(state, action) {
@@ -14,4 +14,4 @@ const allProductsSlice = createSlice({
 });
 
 export default allProductsSlice.reducer;
-export const { setProducts, editAllProducts } = allProductsSlice.actions;
+export const { setProducts, setMessageSave, setNullSave } = allProductsSlice.actions;

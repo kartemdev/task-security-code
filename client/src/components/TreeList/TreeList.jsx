@@ -15,6 +15,11 @@ function TreeList() {
     dispatch(setProductItem({ objItem, objName, nameI }));
   };
 
+  if (file.message === 'invalidMimetype') {
+    return (
+      <h3 style={{ textAlign: 'center' }}>Загрузите файл формата JSON</h3>
+    );
+  }
   return (
     <ul>
       {file ? file.map((obj, i) => (
