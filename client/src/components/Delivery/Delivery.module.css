@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-right: 10vh;
+}
+
+.list {
+  margin-bottom: 15px;
+  list-style-type: none;
+}

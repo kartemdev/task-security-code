@@ -1,0 +1,14 @@
+.treeObject {
+  list-style-type: none;
+}
+
+.treeItem {
+  margin-bottom: 15px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.treeItem:hover {
+  color: rgb(91, 91, 91);
+}
+
