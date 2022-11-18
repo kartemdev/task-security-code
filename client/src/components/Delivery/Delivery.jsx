@@ -5,8 +5,6 @@ import styles from './Delivery.module.css';
 function Delivery() {
   const item = useSelector((store) => store.productItem.data.delivery);
 
-  console.log(item);
-
   return (
     <div className={styles.container}>
       {item

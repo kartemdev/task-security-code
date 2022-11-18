@@ -9,12 +9,10 @@ function TreeList() {
 
   const name = useSelector((store) => store.productItem.data.nameItem);
 
-  console.log('tree');
-
   const dispatch = useDispatch();
 
-  const changeProductItem = (objItem, objName, indexItem) => {
-    dispatch(setProductItem({ objItem, objName, indexItem }));
+  const changeProductItem = (objItem, objName, nameI) => {
+    dispatch(setProductItem({ objItem, objName, nameI }));
   };
 
   return (
@@ -29,7 +27,7 @@ function TreeList() {
                   key={j}
                   className={styles.treeItem}
                   style={name === objItem.nameItem ? { textDecoration: 'underline' } : null}
-                  onClick={() => changeProductItem(objItem, obj.name, j)}
+                  onClick={() => changeProductItem(objItem, obj.name, objItem.nameItem)}
                 >
                   {objItem.nameItem}
                 </li>

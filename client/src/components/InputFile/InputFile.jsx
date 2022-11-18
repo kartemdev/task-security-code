@@ -6,8 +6,6 @@ import { setProducts } from '../../redux/slices/allProductsSlice';
 function InputFile() {
   const dispatch = useDispatch();
 
-  console.log('inputFile');
-
   const handlerChange = async (e) => {
     try {
       const data = new FormData();
