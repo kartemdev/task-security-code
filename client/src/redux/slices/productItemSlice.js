@@ -4,11 +4,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const productItemSlice = createSlice({
   name: 'productItem',
   initialState: {
-    data: {}
+    data: {},
+    objName: null,
+    indexItem: null,
   },
   reducers: {
     setProductItem(state, action) {
-      state.data = action.payload;
+      state.data = action.payload.objItem;
+      state.objName = action.payload.objName;
+      state.indexItem = action.payload.indexItem;
     }
   }
 });

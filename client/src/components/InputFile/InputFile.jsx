@@ -1,10 +1,12 @@
 import Axios from 'axios';
-import React from 'react';
+import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { setProducts } from '../../redux/slices/allProductsSlice';
 
 function InputFile() {
   const dispatch = useDispatch();
+
+  console.log('inputFile');
 
   const handlerChange = async (e) => {
     try {
@@ -23,4 +25,4 @@ function InputFile() {
   );
 }
 
-export default InputFile;
+export default memo(InputFile);

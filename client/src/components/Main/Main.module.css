@@ -17,3 +17,16 @@
   border: 3px solid black;
   background-color: rgb(173, 255, 220);
 }
+
+.pageNameDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageName {
+  cursor: pointer;
+}
+
+.pageName:hover {
+  color: rgb(91, 91, 91);
+}

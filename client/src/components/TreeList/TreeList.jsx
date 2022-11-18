@@ -1,18 +1,20 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import React, { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProductItem } from '../../redux/slices/productItemSlice';
 import styles from './TreeList.module.css';
 
 function TreeList() {
   const file = useSelector((store) => store.allProducts.data);
-  const item = useSelector((store) => store.productItem.data);
+
+  const name = useSelector((store) => store.productItem.data.nameItem);
+
+  console.log('tree');
 
   const dispatch = useDispatch();
 
-  console.log(item);
-
   const changeProductItem = (objItem, objName, indexItem) => {
-    dispatch(setProductItem(objItem));
+    dispatch(setProductItem({ objItem, objName, indexItem }));
   };
 
   return (
@@ -23,7 +25,14 @@ function TreeList() {
           <ul>
             {
               obj.list.map((objItem, j) => (
-                <li key={j} className={styles.treeItem}>{objItem.nameItem}<button onClick={() => changeProductItem(objItem, obj.nmae, j)} type="button">click</button></li>
+                <li
+                  key={j}
+                  className={styles.treeItem}
+                  style={name === objItem.nameItem ? { textDecoration: 'underline' } : null}
+                  onClick={() => changeProductItem(objItem, obj.name, j)}
+                >
+                  {objItem.nameItem}
+                </li>
               ))
             }
           </ul>
@@ -33,4 +42,4 @@ function TreeList() {
   );
 }
 
-export default TreeList;
+export default memo(TreeList);
